@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Kiểm tra form</title>
+
+<style>
+    /* ==============================
+       BODY
+       ============================== */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f2f6f9;
+        margin: 0;
+        padding: 40px;
+    }
+
+
+    /* ==============================
+       FORM
+       ============================== */
+    form {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+
+    /* ==============================
+       TABLE
+       ============================== */
+    table {
+        width: 100%;
+        background: white;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* ==============================
+       Ô
+       ============================== */
+    td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+
+    /* Cột tiêu đề */
+    td:first-child {
+        width: 150px;
+        font-weight: bold;
+        background: #f7f7f7;
+    }
+
+
+    /* ==============================
+       TIÊU ĐỀ
+       ============================== */
+    tr:first-child td {
+        background: #2e86de;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 14px;
+    }
+
+
+    /* ==============================
+       INPUT
+       ============================== */
+    input[type="text"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #2e86de;
+        outline: none;
+        box-shadow: 0 0 4px rgba(46, 134, 222, 0.4);
+    }
+
+
+    /* ==============================
+       RADIO + CHECKBOX
+       ============================== */
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+
+    /* ==============================
+       BUTTON
+       ============================== */
+    input[type="button"],
+    input[type="reset"] {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 3px;
+    }
+
+
+    input[type="button"] {
+        background: #2e86de;
+        color: white;
+    }
+
+
+    input[type="button"]:hover {
+        background: #1b4f72;
+    }
+
+
+    input[type="reset"] {
+        background: #e74c3c;
+        color: white;
+    }
+
+
+    input[type="reset"]:hover {
+        background: #c0392b;
+    }
+
+
+    /* ==============================
+       TEXTAREA
+       ============================== */
+    textarea {
+        resize: vertical;
+    }
+</style>
+
+
+<script language="Javascript">
+
+  
+
+</script>
+
+</head>
+
+<body>
+
+<form name="f">
+
+<table border="1" cellpadding="5" cellspacing="0" width="498">
+
+<tr>
+    <td colspan="2" align="center">
+        THÔNG TIN ỨNG VIÊN
+    </td>
+</tr>
+
+
+<tr>
+    <td>Họ tên</td>
+    <td>
+        <input type="text" size="28" name="txtHoTen"/>
+    </td>
+</tr>
+
+
+<tr>
+    <td>Năm sinh</td>
+
+    <td>
+        <select name="optNamSinh">
+
+            <script language="Javascript">
+
+                var d = new Date();
+
+                for (i = d.getFullYear(); i >= 1950; i--) {
+
+                    document.write(
+                        '<option value="' + i + '">' + i + '</option>'
+                    );
+
+                }
+
+            </script>
+
+        </select>
+    </td>
+</tr>
+
+
+<tr>
+    <td>Giới tính</td>
+
+    <td>
+
+        <input
+            type="radio"
+            name="radGioiTinh"
+            value="Nam"
+            checked
+        />
+        Nam
+
+        <input
+            type="radio"
+            name="radGioiTinh"
+            value="Nữ"
+        />
+        Nữ
+
+    </td>
+</tr>
+
+
+<tr>
+    <td>Mức lương đề nghị</td>
+
+    <td>
+        <input
+            type="text"
+            name="txtMucLuong"
+            onchange="kiemtraluong();"
+        />
+    </td>
+</tr>
+
+
+<tr>
+    <td>Hình thức làm việc</td>
+
+    <td>
+
+        <input
+            type="checkbox"
+            name="chkHinhThucToanTG"
+            value="Toàn thời gian"
+        />
+        Toàn thời gian
+
+        <input
+            type="checkbox"
+            name="chkHinhThucBanTG"
+            value="Bán thời gian"
+        />
+        Bán thời gian
+
+    </td>
+</tr>
+
+
+<tr>
+    <td>Thông tin khác</td>
+
+    <td>
+        <textarea
+            rows="4"
+            cols="25"
+            name="txtThongTin"
+        ></textarea>
+    </td>
+</tr>
+
+
+<tr>
+    <td colspan="2" align="center">
+
+        <input
+            type="button"
+            value="Gửi"
+            onclick="kiemtraform();"
+        />
+
+        <input
+            type="reset"
+            value="Xóa"
+        />
+
+    </td>
+</tr>
+
+
+</table>
+
+</form>
+
+</body>
+</html>

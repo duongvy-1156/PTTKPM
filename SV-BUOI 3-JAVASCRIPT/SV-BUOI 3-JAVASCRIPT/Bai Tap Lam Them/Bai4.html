@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 1</title>
+		<meta charset="utf-8" />
+		<style>
+			table{
+				border:1px solid blue; 
+				box-shadow:5px 5px 5px grey; 
+				border-radius:8px;
+				padding: 10px; 
+				margin: auto;
+			}		
+		</style>
+		<script type="text/javascript">
+			function giai_pt_bac_hai()
+			{
+				var x1,x2;
+				var a,b,c,delta;
+				a = parseInt(f.so_a.value);
+				b = parseInt(f.so_b.value);
+				c = parseInt(f.so_c.value);
+				
+				if(a == 0)
+				{
+					if(b ==0)
+					{
+						if(c == 0)
+								f.kq.value = 'Phương trình vô số nghiệm';
+						else
+								f.kq.value = 'Phương trình vô nghiệm';
+					}
+					else
+						f.kq.value = 'Phương trình có nghiệm x = ' + (-c/b);
+				}
+				else
+				{
+					delta =(b*b-4*a*c)
+					if(delta ==0)
+					{
+						x1 = (-b/(2*a));
+						f.kq.value = 'Phương trình có nghiệm kép ' + x1;						
+					}
+					else if(delta<0)
+					{
+						f.kq.value = 'Phương trình vô nghiệm';
+					}
+					else
+					{					
+						x1=(-b-Math.sqrt(delta))/(2*a);
+						x2=(-b+Math.sqrt(delta))/(2*a);
+						f.kq.value = 'Phương trình có nghiệm x1 = ' + x1 + ' và x2 = ' + x2;
+					}
+				}
+			}		
+		</script>
+	</head>
+	<body>
+		<form action="#" method="post" name="f" >
+			<table>
+				<tr>
+					<td>Số a:</td>
+					<td><input type="text" name="so_a" /></td>
+				</tr>
+				<tr>
+					<td>Số b:</td>
+					<td><input type="text" name="so_b" /></td>
+				</tr>
+				<tr>
+					<td>Số c</td>
+					<td><input type="text" name="so_c" /></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="  Giải " onClick="giai_pt_bac_hai()">
+					</td>
+					<td ><input type "text" value="" name="kq" size="40"></td>
+				</tr>
+				
+			</table>
+		</form>
+	</body>
+</html>

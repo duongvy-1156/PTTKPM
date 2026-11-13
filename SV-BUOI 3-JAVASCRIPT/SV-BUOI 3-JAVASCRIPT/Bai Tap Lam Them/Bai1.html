@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Bài 1 - Máy tính</title>
+    <meta charset="utf-8" />
+
+    <script type="text/javascript" src="bai1.js"></script>
+
+
+    <style>
+
+        /* ==============================
+           BODY
+           ============================== */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #dff3ff;
+
+            margin: 0;
+            padding: 50px 20px;
+        }
+
+
+        /* ==============================
+           MÁY TÍNH
+           ============================== */
+        .calculator {
+            width: 360px;
+
+            margin: auto;
+            padding: 20px;
+
+            background: white;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 120, 200, 0.2);
+        }
+
+
+        /* ==============================
+           TIÊU ĐỀ
+           ============================== */
+        h2 {
+            text-align: center;
+
+            color: #1976d2;
+
+            margin: 0 0 15px 0;
+        }
+
+
+        /* ==============================
+           MÀN HÌNH
+           ============================== */
+        #display {
+            width: 100%;
+            height: 65px;
+
+            box-sizing: border-box;
+
+            padding: 10px;
+
+            border: 2px solid #b3e5fc;
+
+            border-radius: 10px;
+
+            background: #f5fbff;
+
+            color: #1565c0;
+
+            text-align: right;
+
+            font-size: 28px;
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* ==============================
+           BÀN PHÍM
+           ============================== */
+        .buttons {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 8px;
+        }
+
+
+        /* ==============================
+           BUTTON
+           ============================== */
+        button {
+            height: 52px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #e3f2fd;
+
+            color: #1565c0;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        button:hover {
+            background: #bbdefb;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ==============================
+           PHÍM CHỨC NĂNG
+           ============================== */
+        .function {
+            background: #fff3cd;
+
+            color: #856404;
+        }
+
+
+        .function:hover {
+            background: #ffe69c;
+        }
+
+
+        /* ==============================
+           PHÍM PHÉP TOÁN
+           ============================== */
+        .operator {
+            background: #90caf9;
+
+            color: #0d47a1;
+        }
+
+
+        .operator:hover {
+            background: #64b5f6;
+
+            color: white;
+        }
+
+
+        /* ==============================
+           PHÍM SIN - COS - TAN
+           ============================== */
+        .scientific {
+            background: #ce93d8;
+
+            color: #4a148c;
+        }
+
+
+        .scientific:hover {
+            background: #ba68c8;
+
+            color: white;
+        }
+
+
+        /* ==============================
+           PHÍM =
+           ============================== */
+        .equal {
+            background: #81c784;
+
+            color: #1b5e20;
+        }
+
+
+        .equal:hover {
+            background: #66bb6a;
+
+            color: white;
+        }
+
+
+        /* ==============================
+           PHÍM XÓA
+           ============================== */
+        .clear {
+            background: #ef9a9a;
+
+            color: #b71c1c;
+        }
+
+
+        .clear:hover {
+            background: #e57373;
+
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="calculator">
+
+        <h2>Máy tính</h2>
+
+
+        <!-- ==============================
+             MÀN HÌNH
+             ============================== -->
+
+        <input type="text"
+               id="display"
+               value="0"
+               readonly />
+
+
+        <!-- ==============================
+             CÁC PHÍM
+             ============================== -->
+
+        <div class="buttons">
+
+
+            <!-- Hàng 1 -->
+
+            <button class="clear"
+                    onclick="clearDisplay()">
+                C
+            </button>
+
+
+            <button class="function"
+                    onclick="deleteLast()">
+                ⌫
+            </button>
+
+
+            <button class="function"
+                    onclick="percent()">
+                %
+            </button>
+
+
+            <button class="operator"
+                    onclick="setOperator('/')">
+                ÷
+            </button>
+
+
+            <!-- Hàng 2 -->
+
+            <button class="scientific"
+                    onclick="sinValue()">
+                sin
+            </button>
+
+
+            <button class="scientific"
+                    onclick="cosValue()">
+                cos
+            </button>
+
+
+            <button class="scientific"
+                    onclick="tanValue()">
+                tan
+            </button>
+
+
+            <button class="operator"
+                    onclick="setOperator('*')">
+                ×
+            </button>
+
+
+            <!-- Hàng 3 -->
+
+            <button onclick="addNumber('7')">
+                7
+            </button>
+
+
+            <button onclick="addNumber('8')">
+                8
+            </button>
+
+
+            <button onclick="addNumber('9')">
+                9
+            </button>
+
+
+            <button class="operator"
+                    onclick="setOperator('-')">
+                −
+            </button>
+
+
+            <!-- Hàng 4 -->
+
+            <button onclick="addNumber('4')">
+                4
+            </button>
+
+
+            <button onclick="addNumber('5')">
+                5
+            </button>
+
+
+            <button onclick="addNumber('6')">
+                6
+            </button>
+
+
+            <button class="operator"
+                    onclick="setOperator('+')">
+                +
+            </button>
+
+
+            <!-- Hàng 5 -->
+
+            <button onclick="addNumber('1')">
+                1
+            </button>
+
+
+            <button onclick="addNumber('2')">
+                2
+            </button>
+
+
+            <button onclick="addNumber('3')">
+                3
+            </button>
+
+
+            <button class="equal"
+                    onclick="calculate()">
+                =
+            </button>
+
+
+            <!-- Hàng 6 -->
+
+            <button class="function"
+                    onclick="squareRoot()">
+                √
+            </button>
+
+
+            <button onclick="addNumber('0')">
+                0
+            </button>
+
+
+            <button onclick="addDecimal()">
+                .
+            </button>
+
+
+            <button class="function"
+                    onclick="square()">
+                x²
+            </button>
+
+
+            <!-- Hàng 7 -->
+
+            <button class="function"
+                    onclick="changeSign()">
+                +/-
+            </button>
+
+
+            <button class="function"
+                    onclick="clearDisplay()">
+                AC
+            </button>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+

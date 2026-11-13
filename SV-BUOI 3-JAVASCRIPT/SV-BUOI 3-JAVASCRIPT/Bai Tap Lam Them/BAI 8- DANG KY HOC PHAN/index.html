@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Dang Ky Mon Hoc </title>
+		<meta charset='UTF-8'> 
+		<link rel ="stylesheet" text ="text/css" href ="css.css">
+		<script src="custom.js"></script>
+	</head>
+
+	<body>
+    
+		<header>
+			<img src="images/banner.png"/>
+		</header>	
+	
+		<nav>
+			<ul>
+				<li> <a href ="index.html" title ="Dang Ky Mon Hoc"> Trang chủ </a></li> &nbsp
+				<li> <a href ="" title="Website Khoa"> Khoa CNTT </a></li>&nbsp	
+			</ul>
+		</nav>
+	 
+		<div class="wrapper">
+			<div class="noi-dung">
+				<h1> Đăng ký môn học </h1>
+				<p>Những ô có dấu (*) không được bỏ trống</p>
+				
+				<form action="" id="frmDK" method="POST">
+					<fieldset>
+						<legend> Thông tin sinh viên </legend>
+						<div class="controls">
+							<label> (*) MSSV </label>
+							<input type="text" id="txtMSSV" name="txtMSSV" /> 
+						</div>
+						
+						<div class="controls">
+							<label> (*) Họ tên </label>
+							<input type="text" id="txtHoTen" name="txtHoTen" /> 
+						</div>
+						
+						<div class="controls">
+							<label> (*) Lớp </label>
+							<select id="cboLop"><script>taoLop();</script></select>
+						</div>								
+					</fieldset>
+					
+					<fieldset>
+						<legend> Thông tin môn học </legend>
+						<div class="controls">
+							<label> Môn </label>
+							<select id="cboMon"><script>taoMon();</script></select>
+						</div>
+						<div class="controls">
+							<label> Loại </label>
+							<input type="radio" id="rbtnLoaiLoai_CK" name="rbtnLoai" value="Chính khóa" /> Chính khóa
+							<input type="radio" id="rbtnLoaiLoai_CT" name="rbtnLoai" value="Cải thiện" /> Cải thiện
+						</div>											
+					</fieldset>
+					
+					<input type="button" onclick="dangKy()" value="Đăng ký"/>
+					<input type="reset" value="Xóa"/>
+				</form>
+				
+				<h2>Danh Sách</h2>
+				<input type="button" onClick="hienDanhSach()" value="Cập nhật"/>
+				<div id="danhSach">
+				</div>
+			</div>
+		</div>		
+		<footer style="background-color:  #1976d2; padding: 10px; color: #fff;">
+				Copyright &copy; AGU
+		</footer>				
+	</body>
+</html>
+			
