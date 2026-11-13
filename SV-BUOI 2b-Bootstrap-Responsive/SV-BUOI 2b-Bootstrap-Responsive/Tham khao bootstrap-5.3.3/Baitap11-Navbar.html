@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Navbar</title>
+
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background-color: #0d6efd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+        }
+
+        /* ===== LOGO ===== */
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* ===== MENU ===== */
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Hover */
+        .menu a:hover {
+            color: #ffd700;
+        }
+
+        /* ===== HAMBURGER ===== */
+        .menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ===== TABLET ===== */
+        @media (max-width: 768px) {
+
+            .navbar {
+                padding: 15px 25px;
+            }
+
+            .menu {
+                gap: 15px;
+            }
+        }
+
+        /* ===== SMARTPHONE ===== */
+        @media (max-width: 600px) {
+
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            /* Hiện nút hamburger */
+            .hamburger {
+                display: block;
+            }
+
+            /* Menu xuống dòng */
+            .menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                margin-top: 15px;
+            }
+
+            .menu li {
+                border-top: 1px solid rgba(255,255,255,0.3);
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px 0;
+            }
+
+            /* Khi click hamburger → hiện menu */
+            .menu-toggle:checked ~ .menu {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <a href="#" class="logo">MyWebsite</a>
+
+        <!-- Checkbox điều khiển menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- Hamburger -->
+        <label for="menu-toggle" class="hamburger">
+            ☰
+        </label>
+
+        <!-- Menu -->
+        <ul class="menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- ===== NỘI DUNG ===== -->
+    <main style="padding: 40px; text-align: center;">
+        <h1>Responsive Navbar</h1>
+        <p>Thu nhỏ màn hình để xem Navbar thay đổi.</p>
+    </main>
+
+</body>
+
+</html>

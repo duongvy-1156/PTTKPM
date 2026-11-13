@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ghi đè Bootstrap</title>
+
+    <!-- File Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- CSS tự viết -->
+    <style>
+
+        /* Ghi đè selector Bootstrap .btn-primary */
+        .btn-primary {
+            background-color: orange;
+            border-color: orange;
+            font-size: 20px;
+            padding: 12px 30px;
+        }
+
+        /* Khi rê chuột */
+        .btn-primary:hover {
+            background-color: red;
+            border-color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-4">
+
+        <h2>Ví dụ ghi đè Bootstrap</h2>
+
+        <button class="btn btn-primary">
+            Nút Bootstrap
+        </button>
+
+    </div>
+
+</body>
+
+</html>

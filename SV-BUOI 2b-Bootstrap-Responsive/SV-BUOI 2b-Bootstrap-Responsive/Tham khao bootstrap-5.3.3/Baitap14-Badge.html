@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Badges</title>
+
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* ===== BADGES ===== */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 5px;
+
+            border-radius: 20px;
+
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Các loại Badge */
+        .primary {
+            background-color: #0d6efd;
+        }
+
+        .success {
+            background-color: #198754;
+        }
+
+        .danger {
+            background-color: #dc3545;
+        }
+
+        .warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+        .info {
+            background-color: #0dcaf0;
+            color: #212529;
+        }
+
+        .dark {
+            background-color: #212529;
+        }
+
+        /* ===== PRODUCT ===== */
+        .product {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .price {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .badge {
+                font-size: 13px;
+                padding: 5px 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .container {
+                padding: 15px;
+            }
+
+            .badge {
+                margin: 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Badges</h1>
+
+        <!-- ===== CÁC LOẠI BADGE ===== -->
+        <h2>Các loại Badge</h2>
+
+        <span class="badge primary">Primary</span>
+
+        <span class="badge success">Success</span>
+
+        <span class="badge danger">Danger</span>
+
+        <span class="badge warning">Warning</span>
+
+        <span class="badge info">Info</span>
+
+        <span class="badge dark">Dark</span>
+
+
+        <!-- ===== BADGE TRONG SẢN PHẨM ===== -->
+        <div class="product">
+
+            <h3>Laptop ASUS</h3>
+
+            <span class="badge success">
+                Còn hàng
+            </span>
+
+            <span class="badge danger">
+                HOT
+            </span>
+
+            <p class="price">
+                15.000.000đ
+            </p>
+
+        </div>
+
+
+        <!-- ===== BADGE SỐ LƯỢNG ===== -->
+        <div class="product">
+
+            <h3>🔔 Thông báo</h3>
+
+            <span class="badge danger">
+                5
+            </span>
+
+            <p>
+                Bạn có 5 thông báo mới.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

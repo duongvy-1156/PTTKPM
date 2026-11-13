@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Alerts</title>
+
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* ===== ALERT ===== */
+        .alert {
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border-left: 5px solid;
+            font-size: 16px;
+        }
+
+        /* Success */
+        .success {
+            background-color: #d1e7dd;
+            color: #0f5132;
+            border-color: #198754;
+        }
+
+        /* Info */
+        .info {
+            background-color: #cff4fc;
+            color: #055160;
+            border-color: #0dcaf0;
+        }
+
+        /* Warning */
+        .warning {
+            background-color: #fff3cd;
+            color: #664d03;
+            border-color: #ffc107;
+        }
+
+        /* Error */
+        .error {
+            background-color: #f8d7da;
+            color: #842029;
+            border-color: #dc3545;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .alert {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .container {
+                padding: 15px;
+            }
+
+            .alert {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Alerts</h1>
+
+        <!-- Success -->
+        <div class="alert success">
+            ✅ Thành công! Dữ liệu đã được lưu.
+        </div>
+
+        <!-- Info -->
+        <div class="alert info">
+            ℹ️ Thông tin: Bạn có một thông báo mới.
+        </div>
+
+        <!-- Warning -->
+        <div class="alert warning">
+            ⚠️ Cảnh báo! Vui lòng kiểm tra lại thông tin.
+        </div>
+
+        <!-- Error -->
+        <div class="alert error">
+            ❌ Lỗi! Không thể thực hiện thao tác.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

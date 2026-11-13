@@ -1,0 +1,343 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Forms Responsive</title>
+
+    <style>
+
+        /* ===== BODY ===== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+
+        /* ===== FORM ===== */
+
+        .form {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+        }
+
+
+        /* ===== TITLE ===== */
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+
+        /* ===== GRID ===== */
+
+        .form-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 18px;
+        }
+
+
+        /* ===== FORM GROUP ===== */
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* ===== LABEL ===== */
+
+        label {
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+
+        /* ===== INPUT ===== */
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 11px;
+
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+            font-size: 15px;
+        }
+
+
+        /* ===== FOCUS ===== */
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+
+        /* ===== TEXTAREA ===== */
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+
+        /* ===== FULL WIDTH ===== */
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+
+        /* ===== RADIO ===== */
+
+        .radio {
+            display: flex;
+            gap: 20px;
+        }
+
+        .radio label {
+            font-weight: normal;
+        }
+
+        .radio input {
+            width: auto;
+        }
+
+
+        /* ===== BUTTON ===== */
+
+        button {
+            width: 100%;
+            padding: 12px;
+
+            border: none;
+            border-radius: 6px;
+
+            background: #2563eb;
+            color: white;
+
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .form {
+                padding: 25px;
+            }
+
+            .form-grid {
+                gap: 15px;
+            }
+
+        }
+
+
+        /* =========================================
+           SMARTPHONE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .form {
+                padding: 20px;
+            }
+
+            /* 2 CỘT → 1 CỘT */
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+        }
+
+
+        /* =========================================
+           ĐIỆN THOẠI NHỎ
+        ========================================= */
+
+        @media (max-width: 400px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .form {
+                padding: 15px;
+            }
+
+            .radio {
+                gap: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <form class="form">
+
+        <h1>Đăng ký</h1>
+
+
+        <div class="form-grid">
+
+
+            <!-- HỌ TÊN -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    Họ tên
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Nhập họ tên">
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Nhập email">
+
+            </div>
+
+
+            <!-- MẬT KHẨU -->
+
+            <div class="form-group">
+
+                <label for="password">
+                    Mật khẩu
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Nhập mật khẩu">
+
+            </div>
+
+
+            <!-- GIỚI TÍNH -->
+
+            <div class="form-group">
+
+                <label>
+                    Giới tính
+                </label>
+
+                <div class="radio">
+
+                    <label>
+                        <input type="radio"
+                               name="gender">
+                        Nam
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="gender">
+                        Nữ
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- NỘI DUNG -->
+
+            <div class="form-group full">
+
+                <label for="message">
+                    Nội dung
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="Nhập nội dung..."></textarea>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <div class="form-group full">
+
+                <button type="submit">
+                    Đăng ký
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>
+```
