@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hoa Tươi Long Xuyên - Đăng ký</title>
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Gọi file CSS bên ngoài -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+    <div id="container">
+        <!-- HEADER -->
+        <div id="header">
+
+            <div id="banner-top">
+                <img src="images/banner-hoa.jpg" alt="Hoa Tươi Long Xuyên Banner" />
+            </div>
+
+            <div id="nav-bar">
+
+                <div class="nav-links">
+                    <a href="index.html"><i class="bi bi-house-door-fill"></i> Trang Chủ</a>
+                    <a href="#"><i class="bi bi-envelope-fill"></i> Liên Hệ</a>
+                </div>
+
+                <div class="marquee-box">
+                    <marquee behavior="scroll" direction="left" scrollamount="4">
+                        Hoa tươi Long Xuyên kính chào quý khách,
+                        nhận đặt hoa cưới, sinh nhật, chúc mừng.
+                        Chúng tôi đem tận nơi trong nội ô Long Xuyên.
+                    </marquee>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NỘI DUNG CHÍNH -->
+        <div id="main-content">
+
+            <!-- CỘT TRÁI -->
+            <div id="left-col">
+
+                <div class="menu-block">
+
+                    <h3><i class="bi bi-flower1"></i> Hoa Tươi Online</h3>
+
+                    <ul>
+                        <li><a href="#"><i class="bi bi-journal-bookmark-fill"></i> Ý nghĩa các loài hoa</a></li>
+                        <li><a href="#"><i class="bi bi-heart-fill"></i> Hoa Cưới</a></li>
+                        <li><a href="#"><i class="bi bi-gift-fill"></i> Hoa Chúc Mừng</a></li>
+                        <li><a href="#"><i class="bi bi-suit-heart-fill"></i> Hoa Tình Yêu</a></li>
+                        <li><a href="videohoa.html"><i class="bi bi-play-circle-fill"></i> Video các loài hoa</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="menu-block">
+
+                    <h3><i class="bi bi-headset"></i> Hỗ Trợ Khách Hàng</h3>
+
+                    <ul>
+                        <li><a href="#"><i class="bi bi-box-arrow-in-right"></i> Đăng nhập</a></li>
+                        <li><a href="dangky.html"><i class="bi bi-person-plus-fill"></i> Đăng ký</a></li>
+                        <li><a href="#"><i class="bi bi-chat-left-text-fill"></i> Góp ý</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="menu-block">
+
+                    <h3><i class="bi bi-controller"></i> Giải trí</h3>
+
+                    <ul>
+                        <li><a href="#"><i class="bi bi-emoji-smile-fill"></i> Xem hài</a></li>
+                        <li><a href="#"><i class="bi bi-magic"></i> Xem bói</a></li>
+                        <li><a href="cocaro.html"><i class="bi bi-dpad-fill"></i> Cờ caro</a></li>
+                   </ul>
+
+                </div>
+
+
+                <!-- ĐỒNG HỒ -->
+                <div class="clock-box">
+					<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:100px;height:100px;"src="https://www.clocklink.com/html5embed.php?clock=005&timezone=ACST&color=orange&size=100&Title=&Message=&Target=&From=2026,1,1,0,0,0&Color=orange"></iframe>
+				</div>
+
+            </div>
+
+
+            <!-- CỘT GIỮA -->
+            <div id="center-col">
+
+                <div class="form-cell">
+
+                    <form action="#" method="post">
+
+                        <table class="register-table">
+
+                            <!-- TIÊU ĐỀ -->
+                            <tr>
+                                <th colspan="2">
+                                    <i class="bi bi-person-vcard-fill"></i> THÔNG TIN ĐĂNG KÝ
+                                </th>
+                            </tr>
+
+                            <!-- HỌ VÀ TÊN -->
+                            <tr>
+                                <td><i class="bi bi-person-fill"></i> Họ và tên:</td>
+                                <td>
+                                    <input type="text" name="txtHoTen" placeholder="Nhập họ và tên..." />
+                                </td>
+                            </tr>
+
+                            <!-- NGÀY SINH -->
+                            <tr>
+                                <td><i class="bi bi-calendar-event-fill"></i> Ngày sinh:</td>
+                                <td>
+                                    <select name="cboNgay">
+                                        <option value="0">Ngày</option>
+                                        <script type="text/javascript">
+                                            for (var i = 1; i <= 31; i++) {
+                                                document.write("<option value='" + i + "'>" + i + "</option>");
+                                            }
+                                        </script>
+                                    </select>
+
+                                    <select name="cboThang">
+                                        <option value="0">Tháng</option>
+                                        <script type="text/javascript">
+                                            for (var i = 1; i <= 12; i++) {
+                                                document.write("<option value='" + i + "'>" + i + "</option>");
+                                            }
+                                        </script>
+                                    </select>
+
+                                    <select name="cboNam">
+                                        <option value="0">Năm</option>
+                                        <script type="text/javascript">
+                                            var today = new Date();
+                                            var nam = today.getFullYear();
+                                            for (var i = 1970; i <= nam; i++) {
+                                                document.write("<option value='" + i + "'>" + i + "</option>");
+                                            }
+                                        </script>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <!-- GIỚI TÍNH -->
+                            <tr>
+                                <td><i class="bi bi-gender-ambiguous"></i> Giới tính:</td>
+                                <td>
+                                    <label><input type="radio" checked="checked" name="chkGioiTinh" value="0" /> Nam</label>
+                                    <label><input type="radio" name="chkGioiTinh" value="1" /> Nữ</label>
+                                </td>
+                            </tr>
+
+                            <!-- NGHỀ NGHIỆP -->
+                            <tr>
+                                <td><i class="bi bi-briefcase-fill"></i> Nghề nghiệp:</td>
+                                <td>
+                                    <select name="cboNgheNghiep">
+                                        <option value="0">--Chọn--</option>
+                                        <option value="1">Kỹ sư</option>
+                                        <option value="2">Bác sĩ</option>
+                                        <option value="3">Giáo viên</option>
+                                        <option value="4">Sinh viên</option>
+                                        <option value="5">Nghề khác</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <!-- HOA YÊU THÍCH -->
+                            <tr>
+                                <td><i class="bi bi-flower2"></i> Hoa yêu thích:</td>
+                                <td>
+                                    <label><input type="checkbox" checked="checked" name="hoayt" value="1" /> Hoa Lan</label>
+                                    <label><input type="checkbox" name="hoayt" value="2" /> Hoa Hồng</label>
+                                    <br />
+                                    <label><input type="checkbox" name="hoayt" value="3" /> Hoa TuLip</label>
+                                    <label><input type="checkbox" name="hoayt" value="4" /> Hoa Cúc</label>
+                                    <br />
+                                    <label><input type="checkbox" name="hoayt" value="5" /> Hoa Ly</label>
+                                    <label><input type="checkbox" name="hoayt" value="6" /> Hoa Khác</label>
+                                </td>
+                            </tr>
+
+                            <!-- GHI CHÚ -->
+                            <tr>
+                                <td><i class="bi bi-pencil-square"></i> Ghi chú:</td>
+                                <td>
+                                    <textarea name="txtGhiChu" rows="4" cols="30"></textarea>
+                                </td>
+                            </tr>
+
+                            <!-- BUTTON -->
+                            <tr>
+                                <td colspan="2" class="button-cell">
+                                    <input type="submit" value="Đăng ký" />
+                                    <input type="reset" value="Xóa làm lại" />
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- CỘT PHẢI -->
+            <div id="right-col">
+
+                <div class="right-banner">
+                    <img src="images/hoa8.jpg" alt="Bạn cần đặt số lượng lớn?" />
+                </div>
+
+            </div>
+
+
+            <div class="clear"></div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <div id="footer">
+
+            <p>
+                Bản quyền &copy; Công Ty Hoa Tươi Long Xuyên -
+                Email:
+                <a href="mailto:hoatuoilongxuyen@gmail.com">
+                    hoatuoilongxuyen@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

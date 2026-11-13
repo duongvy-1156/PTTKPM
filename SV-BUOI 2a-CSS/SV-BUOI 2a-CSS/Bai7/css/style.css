@@ -1,0 +1,539 @@
+﻿/*
+BO SUNG CODE CSS CHO FILE INDEX
+*/
+
+
+
+/*=======================================================================================================*/
+/*=======================================================================================================*/
+
+.video-box {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ead8d2;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Tiêu đề video */
+
+.video-box h3 {
+    margin: 0 0 10px 0;
+    padding: 8px;
+    background-color: #d77a96;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+/* Video MP4 */
+
+.video-box video {
+    width: 100%;
+    height: 300px;
+    display: block;
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+
+/* YouTube */
+
+.video-box iframe {
+    width: 100%;
+    height: 300px;
+    display: block;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+/* ==================================================
+   NÚT QUAY VỀ TRANG CHỦ
+   ================================================== */
+
+.back-link {
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.back-link a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #16823b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.back-link a:hover {
+    background-color: #0f682f;
+}
+
+
+/* ==================================================
+   SẢN PHẨM
+   ================================================== */
+
+.product-grid {
+    width: 100%;
+}
+
+
+/* Card sản phẩm */
+
+.product-item {
+    width: 48%;
+    float: left;
+    margin: 1%;
+    padding: 8px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ead8d2;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    transition: 0.25s;
+}
+
+
+/* Hình sản phẩm */
+
+.product-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+
+/* Tên hoa */
+
+.product-item p {
+    margin-top: 9px;
+    font-weight: bold;
+    color: #b85c78;
+    font-size: 15px;
+}
+
+
+/* Hover sản phẩm */
+
+.product-item:hover {
+    border-color: #d77a96;
+    box-shadow: 0 5px 12px rgba(184, 92, 120, 0.18);
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   XEM THÊM
+   ================================================== */
+
+.more-link {
+    text-align: right;
+    margin-top: 15px;
+    padding-right: 5px;
+}
+
+.more-link a {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #d77a96;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.more-link a:hover {
+    background-color: #b85c78;
+}
+
+
+/* ==================================================
+   CỘT PHẢI
+   ================================================== */
+
+#right-col {
+    width: 20%;
+    float: left;
+    padding: 10px;
+    background-color: #fff8f5;
+    min-height: 400px;
+}
+
+
+/* Banner phải */
+
+.right-banner {
+    margin-bottom: 12px;
+}
+
+.right-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 7px;
+}
+
+
+/* KHỐI THÔNG TIN BÊN PHẢI */
+
+#right-col > div {
+    margin-bottom: 14px;
+}
+
+
+/* ==================================================
+   CLEAR
+   ================================================== */
+
+.clear {
+    clear: both;
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+#footer {
+    width: 100%;
+    min-height: 50px;
+    padding: 15px 10px;
+    background: linear-gradient(to right, #16823b, #126b32);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+
+/* Link footer */
+
+#footer a {
+    color: #ffe3ed;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   HIỆU ỨNG CHUNG
+   ================================================== */
+
+a {
+    transition: 0.2s;
+}
+
+
+/* ==================================================
+   FORM ĐĂNG KÝ
+   ================================================== */
+
+.form-cell {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-cell form {
+    width: 100%;
+}
+
+.register-table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.register-table th {
+    padding: 14px 10px;
+    background: #e91e63;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.register-table tr:not(:first-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.register-table td {
+    padding: 9px 8px;
+    vertical-align: middle;
+}
+
+.register-table td:first-child {
+    width: 30%;
+    color: #555;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 12px;
+}
+
+.register-table td:nth-child(2) {
+    width: 70%;
+    text-align: left;
+}
+
+.register-table input[type="text"] {
+    width: 100%;
+    height: 34px;
+    padding: 6px 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.register-table input[type="text"]:focus {
+    border-color: #e91e63;
+}
+
+.register-table select {
+    height: 34px;
+    padding: 5px 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    font-size: 14px;
+}
+
+.register-table select[name="cboNgay"] { width: 70px; }
+.register-table select[name="cboThang"] { width: 75px; }
+.register-table select[name="cboNam"] { width: 85px; }
+.register-table select[name="cboNgheNghiep"] { width: 150px; }
+
+.register-table input[type="radio"],
+.register-table input[type="checkbox"] {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.register-table textarea {
+    width: 100%;
+    height: 75px;
+    padding: 7px 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    outline: none;
+}
+
+.register-table textarea:focus {
+    border-color: #e91e63;
+}
+
+.register-table .button-cell {
+    padding: 14px 8px;
+    text-align: center !important;
+    background: #fafafa;
+}
+
+.button-cell input {
+    height: 36px;
+    padding: 0 20px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button-cell input[type="submit"] {
+    background: #e91e63;
+    color: white;
+}
+
+.button-cell input[type="reset"] {
+    background: #777;
+    color: white;
+}
+
+.button-cell input:hover {
+    opacity: 0.85;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media screen and (max-width: 900px) {
+    #container {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-cell { padding: 5px; }
+    .register-table { width: 100%; }
+}
+
+@media screen and (max-width: 700px) {
+    #left-col,
+    #center-col,
+    #right-col {
+        width: 100%;
+        float: none;
+    }
+
+    #left-col,
+    #right-col {
+        min-height: auto;
+    }
+
+    .nav-links { width: 35%; }
+    .marquee-box { width: 65%; }
+    .product-item { width: 48%; }
+}
+
+@media screen and (max-width: 480px) {
+    #header { height: auto; }
+    #banner-top { height: 100px; }
+    #banner-top img { height: 100px; }
+    #nav-bar {
+        height: auto;
+        min-height: 35px;
+    }
+    .nav-links {
+        width: 100%;
+        padding-left: 10px;
+    }
+    .marquee-box { display: none; }
+    .product-item {
+        width: 98%;
+        margin: 1%;
+    }
+    .product-item img { height: 180px; }
+    .video-box video,
+    .video-box iframe { height: 220px; }
+
+    .register-table { width: 100%; }
+    .register-table td:first-child,
+    .register-table td:nth-child(2) {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .register-table td:first-child {
+        padding-bottom: 3px;
+        padding-right: 8px;
+    }
+    .register-table td:nth-child(2) { padding-top: 3px; }
+    .register-table select[name="cboNgay"],
+    .register-table select[name="cboThang"],
+    .register-table select[name="cboNam"] { width: auto; }
+    .register-table th { font-size: 16px; }
+    .button-cell input { padding: 0 15px; }
+}
+
+/*CSS CHO CO CA RO*/
+  .caro-game-wrapper {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            max-width: 420px;
+            margin: 15px auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .caro-title {
+            color: #1e3a8a;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .caro-status {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #334155;
+        }
+
+        .player-x {
+            color: #dc2626;
+        }
+
+        .player-o {
+            color: #2563eb;
+        }
+
+        /* Bàn cờ 12x12 ô */
+        .caro-board {
+            display: grid;
+            grid-template-columns: repeat(12, 28px);
+            grid-template-rows: repeat(12, 28px);
+            gap: 1px;
+            background-color: #94a3b8;
+            border: 2px solid #475569;
+            width: fit-content;
+            margin: 0 auto 12px auto;
+        }
+
+        .caro-cell {
+            width: 28px;
+            height: 28px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .caro-cell:hover {
+            background-color: #f1f5f9;
+        }
+
+        .caro-cell.x {
+            color: #dc2626;
+        }
+
+        .caro-cell.o {
+            color: #2563eb;
+        }
+
+        .btn-reset {
+            background-color: #059669;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-reset:hover {
+            background-color: #047857;
+        }
